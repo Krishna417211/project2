@@ -1,0 +1,11 @@
+gitignore
+
+
+
+__pycache__/
+*.pyc
+data/taxi_clean.csv
+models/*.pkl
+mlruns/
+mlflow.db
+.pytest_cache/
