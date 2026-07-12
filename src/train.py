@@ -6,7 +6,7 @@ Model training module.
 This module loads the cleaned taxi dataset, trains a Linear Regression
 model, evaluates its performance, and saves the trained model.
 """
-
+import os
 import joblib
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -99,6 +99,8 @@ def save_model(model, path="models/taxi_model.pkl"):
         model: Trained machine learning model.
         path (str): Output file path.
     """
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
     joblib.dump(model, path)
 
 
